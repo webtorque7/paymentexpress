@@ -19,6 +19,10 @@ class Response extends AbstractResponse
         return empty($this->data->DpsTxnRef) ? null : (string) $this->data->DpsTxnRef;
     }
 
+    public function getTransactionId() {
+        return empty($this->data->TxnId) ? null : (string) $this->data->TxnId;
+    }
+
     public function getCardReference()
     {
         return empty($this->data->Transaction->DpsBillingId)
