@@ -48,6 +48,11 @@ class PxPayAuthorizeRequest extends AbstractRequest
         $data->UrlSuccess = $this->getReturnUrl();
         $data->UrlFail = $this->getReturnUrl();
 
+	$data->EnableAddBillCard = true;
+//        if ($this->getCardReference()) {
+//	        $data->EnableAddBillCard = true;
+//        }
+
         return $data;
     }
 
